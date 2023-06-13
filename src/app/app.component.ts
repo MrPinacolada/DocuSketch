@@ -16,10 +16,8 @@ export class AppComponent {
     this.availableIcons = Object.values({ ...fas, ...far, ...fab });
   }
   showIcons = () => {
+    const randomIndex = Math.floor(Math.random() * this.availableIcons.length);
     setTimeout(() => {
-      const randomIndex = Math.floor(
-        Math.random() * this.availableIcons.length
-      );
       this.currentIcon = this.availableIcons[randomIndex];
       console.log('done!');
     }, 3000);
